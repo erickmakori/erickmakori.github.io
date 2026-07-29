@@ -1,1 +1,2 @@
-# erickmakori.github.io
+# Static portfolio
+Open index.html

@@ -1,0 +1,403 @@
+/* =====================================================
+   Eric Makori Portfolio
+   Main Stylesheet
+===================================================== */
+
+:root {
+    --primary: #3b82f6;
+    --primary-light: #60a5fa;
+    --secondary: #111827;
+    --dark: #0b1120;
+    --card: #172033;
+    --light: #f5f7fb;
+    --white: #ffffff;
+    --text: #d1d5db;
+    --heading: #ffffff;
+    --border: #293548;
+    --shadow: 0 15px 40px rgba(0, 0, 0, .35);
+    --radius: 16px;
+    --transition: .35s ease;
+    --max-width: 1200px;
+}
+
+
+/* ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+
+/* ========================= */
+
+.background-grid {
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, .03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -2;
+}
+
+
+/* ========================= */
+
+.container {
+    width: min(90%, var(--max-width));
+    margin: auto;
+}
+
+
+/* ========================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(15px);
+    background: rgba(11, 17, 32, .88);
+    border-bottom: 1px solid rgba(255, 255, 255, .05);
+    z-index: 999;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
+
+.logo {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 800;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #d7dde7;
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.theme-button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: var(--card);
+    color: white;
+    font-size: 18px;
+}
+
+
+/* ========================= */
+
+
+/* HERO */
+
+
+/* ========================= */
+
+.hero {
+    padding-top: 150px;
+    padding-bottom: 120px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.3fr .7fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.subtitle {
+    color: var(--primary-light);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    max-width: 650px;
+    margin-bottom: 40px;
+}
+
+
+/* ========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+
+/* ========================= */
+
+.btn {
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.primary {
+    background: var(--primary);
+    color: white;
+}
+
+.primary:hover {
+    transform: translateY(-4px);
+    background: #2563eb;
+}
+
+.secondary {
+    border: 2px solid var(--primary);
+    color: white;
+}
+
+.secondary:hover {
+    background: var(--primary);
+}
+
+
+/* ========================= */
+
+.hero-card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.profile-image {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--primary);
+}
+
+.profile-info {
+    margin-top: 25px;
+}
+
+.profile-info h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.availability {
+    display: inline-block;
+    margin-top: 18px;
+    background: #143b23;
+    color: #8df6b5;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: .9rem;
+}
+
+
+/* ========================= */
+
+.stats {
+    padding: 70px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.stat {
+    background: var(--card);
+    padding: 35px;
+    border-radius: var(--radius);
+    text-align: center;
+    transition: .3s;
+}
+
+.stat:hover {
+    transform: translateY(-8px);
+}
+
+.stat h2 {
+    color: white;
+    font-size: 2.7rem;
+    margin-bottom: 8px;
+}
+
+.stat p {
+    color: #94a3b8;
+}
+
+
+/* ========================= */
+
+.section {
+    padding: 110px 0;
+}
+
+.dark {
+    background: #101827;
+}
+
+.section-title {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.section-title h2 {
+    color: white;
+    font-size: 2.7rem;
+}
+
+.section-text {
+    max-width: 900px;
+    margin: auto;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+
+/* ========================= */
+
+.timeline {
+    display: grid;
+    gap: 35px;
+}
+
+.timeline-item {
+    background: var(--card);
+    padding: 35px;
+    border-left: 5px solid var(--primary);
+    border-radius: 10px;
+}
+
+.timeline-item h3 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.timeline-item span {
+    color: var(--primary-light);
+    display: block;
+    margin-bottom: 20px;
+}
+
+.timeline-item ul {
+    padding-left: 20px;
+}
+
+
+/* ========================= */
+
+.skills-grid,
+.project-grid,
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.skill-card,
+.project-card,
+.blog-card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 18px;
+    transition: .35s;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow);
+}
+
+.skill-card h3,
+.project-card h3,
+.blog-card h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+/* ========================= */
+
+.contact {
+    text-align: center;
+    padding: 120px 0;
+}
+
+.contact h2 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+/* ========================= */
+
+footer {
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    text-align: center;
+    padding: 35px;
+    color: #94a3b8;
+}
